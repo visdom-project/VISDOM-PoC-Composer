@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "webpack-dev-server --https --port 9071 --env.assetPath=https://localhost:9071",
-    "build": "webpack --mode=production --env.baseName=/dashboard --env.assetPath=/composer",
+    "build": "webpack --mode=production --env.baseName=${BASENAME} --env.assetPath=${ASSETPATH:=/composer}",
     "analyze": "webpack --mode=production --env.analyze=true",
     "lint": "eslint src --ext js",
     "format": "prettier --write \"./**\"",

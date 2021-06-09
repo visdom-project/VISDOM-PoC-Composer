@@ -21,17 +21,21 @@
 
 ## Table of Contents
 
-* [About the Project](#about-the-project)
-  * [Built With](#built-with)
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
-* [Usage](#usage)
-* [Roadmap](#roadmap)
-* [Contributing](#contributing)
-* [License](#license)
-* [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
+- [Table of Contents](#table-of-contents)
+- [About The Project](#about-the-project)
+  - [Built With](#built-with)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+  - [Local development](#local-development)
+    - [One module at a time](#one-module-at-a-time)
+    - [All modules together](#all-modules-together)
+  - [Docker](#docker)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
 
 ## About The Project
 
@@ -60,7 +64,8 @@ This project uses [React](https://reactjs.org/) and [Yarn](https://yarnpkg.com/)
 
 ### Prerequisites
 
-You need [Yarn](https://yarnpkg.com/) and/or [npm](https://www.npmjs.com/). This guide is written with Yarn in mind.
+You need [Yarn](https://yarnpkg.com/) and/or [npm](https://www.npmjs.com/). This guide is written with Yarn in mind.  
+For usage inside Docker, you will need [Docker](https://docs.docker.com/get-docker/) and [Docker compose](https://docs.docker.com/compose/install/). Please see the [Docker](#docker) section of this document for deployment instructions.
 
 ### Installation
 
@@ -127,6 +132,15 @@ yarn start
 ```
 
 Now follow the steps above for "One module at a time" for each of the modules you wish to work on, including this one.
+
+### Docker
+
+To deploy Composer using a Docker container, set the `BASENAME` environment variable to match the subdirectory you plan on deploying Composer to. If the root of the webserver is to be used, `BASENAME` can be left unset. Alternatively the `.env.example` file can be copied to `.env` and modified to match your configuration.
+
+To build and start the container run
+```sh
+docker-compose up -d --build
+```
 
 ## Contributing
 

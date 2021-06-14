@@ -5,5 +5,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.prod
+      args:
+        - COMPOSER_ASSETPATH
+        - COMPOSER_BASENAME
     ports:
       - '9071:80'

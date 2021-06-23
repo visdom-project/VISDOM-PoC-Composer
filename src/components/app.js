@@ -4,15 +4,14 @@ import "tabler-react/dist/Tabler.css";
 import "../assets/css/tabler-override.css";
 import history from "../history";
 import EmptyView from "../pages/emptyView";
-import AddViewConfiguration from "../pages/viewConfiguration/addViewConfiguration";
 import AddApplicationConfiguration from "../pages/applicationConfiguration/addApplicationConfiguration";
-import ModifyViewConfiguration from "../pages/viewConfiguration/modifyViewConfiguration";
 import ModifyApplicationConfiguration from "../pages/applicationConfiguration/modifyApplicationConfiguration";
 import ViewConfigurations from "../pages/viewConfiguration/viewConfigurations";
 import ApplicationConfigurations from "../pages/applicationConfiguration/applicationConfigurations";
 import RoleConfigurations from "../pages/roles/roleConfigurations";
 import AddRoleConfiguration from "../pages/roles/addRoleConfiguration";
 import ModifyRoleConfiguration from "../pages/roles/modifyRoleConfiguration";
+import ViewConfiguration from "../pages/viewConfiguration/ViewConfiguration";
 import Profile from "../pages/profile";
 import Login from "../pages/login";
 import LogoutPage from "../pages/logout";
@@ -35,7 +34,7 @@ export default function App(props) {
       <Switch>
         <Route
           path="/composer/view-configuration/:id"
-          component={ModifyViewConfiguration}
+          component={ViewConfiguration}
           exact
         />
         <Route
@@ -44,7 +43,7 @@ export default function App(props) {
         />
         <Route
           path="/composer/add-view-configuration"
-          component={AddViewConfiguration}
+          component={ViewConfiguration}
         />
         <Route
           path="/composer/application-configuration/:id"

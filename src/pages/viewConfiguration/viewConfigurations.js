@@ -3,8 +3,8 @@ import { ButtonGroup } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { Button, Card, Grid, Page, Table } from "tabler-react";
-import DashboardWrapper from "../../components/DashboardWrapper";
 import ActionButton from "../../components/actionButton";
+import DashboardWrapper from "../../components/DashboardWrapper";
 
 export default function ViewConfigurations(props) {
   const history = useHistory();
@@ -71,7 +71,6 @@ export default function ViewConfigurations(props) {
     });
   }
 
-  //const views = useSelector(selectViewConfigurations);
   const views = useSelector((state) => state.viewConfiguration.views);
   return (
     <DashboardWrapper>

@@ -27,10 +27,17 @@ export const viewConfigurationSlice = createSlice({
         id: 1,
         name: "Progressview",
         description: "This page will render the ProgressView microfrontend.",
+        fluid: "false",
         microfrontends: [
           {
-            name: "Progressview",
             microfrontendKey: "progressview",
+            sizes: {
+              xs: "12",
+              sm: "12",
+              md: "12",
+              lg: "12",
+              xl: "12",
+            },
           },
         ],
       },
@@ -38,10 +45,17 @@ export const viewConfigurationSlice = createSlice({
         id: 2,
         name: "Statusview",
         description: "This page will render the StatusView microfrontend.",
+        fluid: "false",
         microfrontends: [
           {
-            name: "Statusview",
             microfrontendKey: "statusview",
+            sizes: {
+              xs: "12",
+              sm: "12",
+              md: "12",
+              lg: "12",
+              xl: "12",
+            },
           },
         ],
       },
@@ -49,10 +63,17 @@ export const viewConfigurationSlice = createSlice({
         id: 3,
         name: "DemoA",
         description: "This page will render the DemoA microfrontend.",
+        fluid: "false",
         microfrontends: [
           {
-            name: "DemoA",
             microfrontendKey: "demo-a",
+            sizes: {
+              xs: "12",
+              sm: "12",
+              md: "12",
+              lg: "12",
+              xl: "12",
+            },
           },
         ],
       },
@@ -60,10 +81,17 @@ export const viewConfigurationSlice = createSlice({
         id: 4,
         name: "DemoB",
         description: "This page will render the DemoB microfrontend.",
+        fluid: "false",
         microfrontends: [
           {
-            name: "DemoB",
             microfrontendKey: "demo-b",
+            sizes: {
+              xs: "12",
+              sm: "12",
+              md: "12",
+              lg: "12",
+              xl: "12",
+            },
           },
         ],
       },
@@ -72,14 +100,27 @@ export const viewConfigurationSlice = createSlice({
         name: "DemoA and DemoB",
         description:
           "This page will render both the DemoA and the DemoB related microfrontends.",
+        fluid: "false",
         microfrontends: [
           {
-            name: "DemoA",
             microfrontendKey: "demo-a",
+            sizes: {
+              xs: "12",
+              sm: "12",
+              md: "12",
+              lg: "12",
+              xl: "12",
+            },
           },
           {
-            name: "DemoB",
             microfrontendKey: "demo-b",
+            sizes: {
+              xs: "12",
+              sm: "12",
+              md: "12",
+              lg: "12",
+              xl: "12",
+            },
           },
         ],
       },
@@ -88,10 +129,17 @@ export const viewConfigurationSlice = createSlice({
         name: "Composer",
         description:
           "This page will render the composer in the composer. How strange.",
+        fluid: "false",
         microfrontends: [
           {
-            name: "Composer",
             microfrontendKey: "composer",
+            sizes: {
+              xs: "12",
+              sm: "12",
+              md: "12",
+              lg: "12",
+              xl: "12",
+            },
           },
         ],
       },
@@ -140,14 +188,11 @@ export const viewConfigurationSlice = createSlice({
   },
 });
 
-// Export actions.
 export const { load, create, remove, update } = viewConfigurationSlice.actions;
 
-// Export selector for views.
 export const selectViewConfigurations = (state) =>
   state.viewConfiguration.views;
 
 export const selectViewConfiguration = (state) => state.viewConfiguration.views;
 
-// Finally, export the reducer as default.
 export default viewConfigurationSlice.reducer;

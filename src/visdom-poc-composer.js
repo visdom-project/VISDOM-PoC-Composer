@@ -6,6 +6,10 @@ import RegisterApplications from "./registerApplications";
 import Root from "./root.component";
 import "./set-public-path";
 
+// Fix missing dependencies for various package version errors.
+window.Buffer = window.Buffer || require("buffer/").Buffer;
+window.process = window.process || require("process");
+
 // Create our SingleSPA application.
 const lifecycles = singleSpaReact({
   React,
